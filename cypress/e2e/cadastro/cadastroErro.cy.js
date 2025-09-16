@@ -2,7 +2,7 @@ describe('Cadastro - Cenários de Erro', () => {
   beforeEach(()=>{
     cy.acessarPaginaDeFormulario();
   });
-  it('Exibe erro ao submeter um e-mail mal formatado', () => {
+  it('exibe mensagem de erro ao submeter um e-mail mal formatado', () => {
     cy.preencherDadosPessoais({
       firstName: 'João',
       lastName: 'Souza',
@@ -30,7 +30,7 @@ describe('Cadastro - Cenários de Erro', () => {
     
   });
   
-  it('Exibe erro quando senha e confirmação de senha não coincidem', () => {
+  it('exibe mensagem de erro quando senha e confirmação de senha não coincidem', () => {
 
     cy.preencherDadosPessoais({
       firstName: 'Ana',
@@ -59,7 +59,7 @@ describe('Cadastro - Cenários de Erro', () => {
     cy.contains('Senhas não coincidem').should('be.visible')
   });
 
-  it('Exibe erro ao submeter com campos obrigatórios em branco', () => {
+  it('exibe mensagem de erro ao submeter com campos obrigatórios em branco', () => {
   
     cy.get('[data-testid="btn-submit"]').click();
     cy.get('[data-testid="input-wantsPayment"]').should('not.be.checked');
@@ -71,7 +71,7 @@ describe('Cadastro - Cenários de Erro', () => {
   
   });
 
-  it('Exibe erro ao não preencher dados de cartão', () => {
+  it('exibe mensagem de erro ao não preencher dados de cartão', () => {
     cy.preencherDadosPessoais({
       firstName: 'Carlos',
       lastName: 'Oliveira',
@@ -99,7 +99,7 @@ describe('Cadastro - Cenários de Erro', () => {
 
     cy.resultadoDoFormulario('Cadastro Incompleto !');
   });
-    it('Exibe erro quando nome contem menos que dois caracteres', () => {
+    it('exibe mensagem de erro quando nome contem menos que dois caracteres', () => {
 
     cy.preencherDadosPessoais({
       firstName: 'A',
