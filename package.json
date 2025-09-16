@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "cypress": "^13.5.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.0",
+    "npm-run-all": "^4.1.5"
+  },"scripts": {
+  "test:sucesso": "cypress run --spec cypress/e2e/cadastro/cadastroSucesso.cy.js",
+  "test:erro": "cypress run --spec cypress/e2e/cadastro/cadastroErro.cy.js",
+  "test:todos": "cypress run",
+  "report:sucesso": "npm run test:sucesso && npx mochawesome-merge cypress/reports/mochawesome-report/*.json > mochawesome-sucesso.json && npx marge mochawesome-sucesso.json --reportDir cypress/reports/sucesso --reportFilename index.html",
+  "report:erro": "npm run test:erro && npx mochawesome-merge cypress/reports/mochawesome-report/*.json > mochawesome-erro.json && npx marge mochawesome-erro.json --reportDir cypress/reports/erro --reportFilename index.html",
+  "report:todos": "npm run test:todos && npx mochawesome-merge cypress/reports/mochawesome-report/*.json > mochawesome.json && npx marge mochawesome.json --reportDir cypress/reports/geral --reportFilename index.html"
+}
+}
