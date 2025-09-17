@@ -1,4 +1,4 @@
-describe('Test Automation - Formulário de Cadastro', () => {
+describe('Test Automation - Formulário de Cadastro com Sucesso', () => {
   beforeEach(()=>{
     cy.acessarPaginaDeFormulario();
   });
