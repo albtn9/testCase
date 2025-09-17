@@ -63,6 +63,6 @@ cypress/reports/geral/index.html
 
 ## **⚠️ Observações Importantes**
 
-- ✅ Os testes cobrem validação dos campos obrigatórios, formatação de e-mail, consistência de senha e fluxos de pagamento.
+- ✅ Os testes cobrem validação dos campos obrigatórios, formatação de e-mail, consistência de senha e de pagamento.
 - 📩 As mensagens exibidas pelo sistema são validadas conforme o esperado.
 - 🧪 O projeto utiliza a ferramenta **Cypress** versão **13.5.0**.
