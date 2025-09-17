@@ -3,6 +3,7 @@ describe('Cadastro - Cenários de Erro', () => {
     cy.acessarPaginaDeFormulario();
   });
   it('exibe mensagem de erro ao submeter um e-mail mal formatado', () => {
+    
     cy.preencherDadosPessoais({
       firstName: 'João',
       lastName: 'Souza',
@@ -72,6 +73,7 @@ describe('Cadastro - Cenários de Erro', () => {
   });
 
   it('exibe mensagem de erro ao não preencher dados de cartão', () => {
+    
     cy.preencherDadosPessoais({
       firstName: 'Carlos',
       lastName: 'Oliveira',
