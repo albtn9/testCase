@@ -1,4 +1,4 @@
-describe('Cadastro - Cenários de Erro', () => {
+describe('Test Automation - Formulário de Cadastro com Erro', () => {
   beforeEach(()=>{
     cy.acessarPaginaDeFormulario();
   });
